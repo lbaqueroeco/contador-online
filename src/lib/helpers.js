@@ -19,6 +19,12 @@ helpers.matchPassword = async (password, savedPassword) => {
   }
 };
 
+helpers.encryptdocs = async (docinfo) => {
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(docinfo, salt);
+  return hash;
+};
+
 
 
 module.exports = helpers;

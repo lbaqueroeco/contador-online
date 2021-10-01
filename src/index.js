@@ -22,6 +22,7 @@ app.use(express.json());
 app.use('/api/productos', require('./routes/productos.routes'));
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/usuarios', require('./routes/user.routes'));
+app.use('/api/documentos', require('./routes/documents.routes'));
 
 // Static files
 app.use(express.static(path.join(__dirname, '/public')));
