@@ -9,22 +9,30 @@ const documentscontrollers = {};
 
 
 documentscontrollers.upload = async (req,res) => {
-    const {filename, destination, path } = req.files.rut[0]
+    const {filename, path } = req.files.rut[0]
     const docdata = {
         filename,
-        destination,
         path
     }
-
     filenamecrypt = await helpers.encryptdocs(docdata.filename)
-    filedestcrypt = await helpers.encryptdocs(docdata.destination)
     filepathcrypt = await helpers.encryptdocs(docdata.path)
-    
-    console.log(filenamecrypt)
-    console.log(filedestcrypt)
-    console.log(filepathcrypt)
+    const newdocdata = {
+        doc_nombre: filenamecrypt,
+        doc_url:filepathcrypt
+    }
+    const result = await pool.query('INSERT INTO documentos set ? ', [newdocdata]);
+
+
 res.json({mensaje: 'documento cargado satisfactoriamente'})
 }
 
+documentscontrollers.download = async (req,res) => {
+    const respuesta = await pool.query('SELECT * FROM documentos ');
+    console.log(respuesta)
+    res.json(respuesta)
+
+
+
+}
 
 module.exports = documentscontrollers;

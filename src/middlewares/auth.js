@@ -39,21 +39,36 @@ auth.verifytoken = async (req,res, next) => {
 auth.isAdmin = async(req, res, next) =>{
 
     const rows = await pool.query('SELECT *  FROM usuarios WHERE idusuarios=?', req.userid );
-    const rol = await pool.query('SELECT *  FROM roles WHERE idroles=?', rows[0].roles_idroles );
-    console.log(rol[0].rol_nombre)
-    if(rol[0].rol_nombre == 'administrador'){
+    //const rol = await pool.query('SELECT *  FROM roles WHERE idroles=?', rows[0].roles_idroles );
+ 
+    if(rows[0].roles_idroles == 3){
         next()
     } else{
         res.json({mensaje: 'se requiere rol de administrador para ejecutar esta funcion'})
     } 
 
 }
+
+
+auth.isContador = async(req, res, next) =>{
+
+    const rows = await pool.query('SELECT *  FROM usuarios WHERE idusuarios=?', req.userid );
+    //const rol = await pool.query('SELECT *  FROM roles WHERE idroles=?', rows[0].roles_idroles );
+   
+    if(rows[0].roles_idroles == 2){
+        next()
+    } else{
+        res.json({mensaje: 'se requiere rol de contador para ejecutar esta funcion'})
+    } 
+
+}
+
 auth.isClient = async(req, res, next) =>{
 
     const rows = await pool.query('SELECT *  FROM usuarios WHERE idusuarios=?', req.userid );
-    const rol = await pool.query('SELECT *  FROM roles WHERE idroles=?', rows[0].roles_idroles );
-    console.log(rol[0].rol_nombre)
-    if(rol[0].rol_nombre == 'cliente'){
+  //  const rol = await pool.query('SELECT *  FROM roles WHERE idroles=?', rows[0].roles_idroles );
+ 
+    if(rows[0].roles_idroles == 1){
         next()
     } else{
         res.json({mensaje: 'se requiere rol de cliente para ejecutar esta funcion'})

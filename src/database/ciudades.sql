@@ -1,31 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.9.7
--- https://www.phpmyadmin.net/
---
--- Servidor: localhost:3306
--- Tiempo de generación: 29-09-2021 a las 21:01:27
--- Versión del servidor: 10.3.30-MariaDB-cll-lve
--- Versión de PHP: 7.3.28
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `ladpyvvt_hym`
---
-
---
--- Volcado de datos para la tabla `ciudades`
---
-
 INSERT INTO `ciudades` (`idciudades`, `ciu_codigo`, `ciu_nombre`, `ciu_iddepartamento`) VALUES
 (1, '111', 'BOGOTA', 1),
 (2, '51', 'MEDELLIN', 2),
@@ -1128,47 +1100,3 @@ INSERT INTO `ciudades` (`idciudades`, `ciu_codigo`, `ciu_nombre`, `ciu_iddeparta
 (2199, '99524', 'LA PRIMAVERA', 1133),
 (2200, '99624', 'SANTA ROSALIA', 1133),
 (2201, '99773', 'CUMARIBO', 1133);
-
---
--- Volcado de datos para la tabla `departamentos`
---
-
-INSERT INTO `departamentos` (`iddepartamentos`, `dep_codigo`, `dep_nombre`) VALUES
-(1, '11', 'Bogotá'),
-(2, '5', 'Antioquia'),
-(3, '76', 'Valle del Cauca'),
-(4, '8', 'Atlántico'),
-(5, '68', 'Santander'),
-(6, '13', 'Bolivar'),
-(7, '73', 'Tolima'),
-(8, '66', 'Risaralda'),
-(1109, '15', 'Boyacá'),
-(1110, '17', 'Caldas'),
-(1111, '18', 'Caquetá'),
-(1112, '19', 'Cauca'),
-(1113, '20', 'Cesar'),
-(1114, '23', 'Córdoba'),
-(1115, '25', 'Cundinamarca'),
-(1116, '27', 'ChocÃ³'),
-(1117, '41', 'Huila'),
-(1118, '44', 'Guajira'),
-(1119, '47', 'Magdalena'),
-(1120, '50', 'Meta'),
-(1121, '52', 'NariÃ±o'),
-(1122, '54', 'Norte'),
-(1123, '63', 'Quindio'),
-(1124, '70', 'Sucre'),
-(1125, '81', 'Arauca'),
-(1126, '85', 'Casanare'),
-(1127, '86', 'Putumayo'),
-(1128, '88', 'San AndrÃ©s'),
-(1129, '91', 'Amazonas'),
-(1130, '94', 'GuainÃ­a'),
-(1131, '95', 'Guaviare'),
-(1132, '97', 'VaupÃ©s'),
-(1133, '99', 'Vichada');
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

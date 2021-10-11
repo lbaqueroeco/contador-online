@@ -1,10 +1,12 @@
+/*Script : funciones generales para la aplicación
+*/
 const bcrypt = require('bcryptjs');
+const pool = require('../database');
 
 
 const helpers = {};
 
-/*Script : funciones generales para la aplicación
-*/
+
 helpers.encryptPassword = async (password) => {
   const salt = await bcrypt.genSalt(10);
   const hash = await bcrypt.hash(password, salt);
@@ -24,6 +26,21 @@ helpers.encryptdocs = async (docinfo) => {
   const hash = await bcrypt.hash(docinfo, salt);
   return hash;
 };
+
+helpers.verifyexist= async(tablename, column, item) =>{
+  
+
+  const rows = await pool.query('SELECT * FROM ?? WHERE ??=?',[tablename, column,item] );
+  if (rows.length > 0) {
+    return true
+  }else {
+    false
+  }
+
+  
+
+}
+
 
 
 
