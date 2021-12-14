@@ -1,0 +1,79 @@
+.tituls {
+  color:#FFF;
+}
+
+.colorback{
+  background-color: #3959a8;
+}
+
+.botones1 {
+  width: 250px;
+}
+
+.izqq {
+  text-align: left;
+}
+
+.izqq1 {
+  text-align: left;
+  padding: 3px;
+}
+
+.derechas {
+  text-align: right;
+  display: block;
+  left: 2px;
+}
+
+.btn1 {
+  background-color:#043184;
+  color:white;
+  padding: 6px;
+  max-width: 350px; 
+  border:thin;  
+  border-radius: 2px;
+  min-width: 250px;
+}
+
+.actions {
+  color:#043184;
+  border: none;
+}
+
+.actions:hover {
+  color: rgb(59, 81, 182);
+}
+
+.btn1:hover{
+  color: white;
+  text-decoration: none;
+  background-color: rgb(59, 81, 182);
+}
+
+.titul2 {
+  background-color:#043184; color:white; padding: 5px;
+}
+
+.pequeno {
+  font-size:10px;
+}
+
+.amarillo {
+  background-color:#DFAF13; color:#FFF; text-align: center;
+}
+
+.rojo {
+  background-color:#EF2C13; color:#FFF; text-align: center;
+}
+
+.verde {
+  background-color:#1ECD1A; color:#FFF; text-align: center;
+}
+
+.botonok {
+  width:100px; background-color:#1ECD1A; border-color: #1ECD1A; height: 35px; color:#FFF;
+}
+
+.botonmal {
+  width:100px; background-color:#EF2C13; border-color: #EF2C13; height: 35px; color:#FFF;
+}
