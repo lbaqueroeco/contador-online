@@ -1,0 +1,88 @@
+.back
+{
+    background-image: url('../../assets/images/fondo-esap2.jpeg');
+    height: 855px;
+
+}
+
+.cardlogin {
+    background-image: url('../../assets/images/fondo-esap.jpeg');
+    top:150px;
+    border-radius: 15px;
+}
+
+.imgside {
+    left:0%;
+    width: 40%;
+    position: absolute;
+    height: 395px;
+    padding-top: 90px;
+    padding-left: 25px;
+}
+.titullog {
+    font-size: 35px;
+}
+.white {
+    color: white;
+    text-align: left;
+    text-shadow: 3px 3px #000;
+
+}
+
+.dere {
+    width: 100%;
+    left: 100px;
+}
+
+.botonlogin{
+    width: 130px;
+    padding: 5px;
+    background-color: #063970;
+    border-radius: 15px 15px 15px 15px;
+    border:none;
+    color: white;
+    font-weight: bold;
+}
+
+.formside {
+    left:40%;
+    width: 60%;
+    background-color: white;
+    position: absolute;
+    height: 395px;
+    padding: 30px;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    border-radius: 0px 15px 15px 0px;
+    text-align: left;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh !important;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+#sidebar-wrapper{
+    min-height: 100vh !important;
+    width: 100vw;
+    margin-left: -1rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+}
